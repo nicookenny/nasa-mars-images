@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import { Card, Form, Button } from 'react-bootstrap';
 import styles from './searchbar.module.css';
 
+const apikey = 'o5lbWqCAy5pD5P3so5UC6eL9z9rV3BxRVAR3ssk8';
+
 const handleSearch = async (rover, date, camera, setResponse, setLoading) => {
 	const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${
 		rover !== '' ? rover : 'curiosity'
 	}/photos?earth_date=${date !== '' ? date : Date()}&camera=${
 		camera !== '' ? camera : 'fhaz'
-	}&api_key=DEMO_KEY`;
+	}&api_key=${apikey}`;
 	setLoading(true);
 	const response = await (await fetch(URL)).json();
 
