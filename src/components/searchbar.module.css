@@ -1,0 +1,9 @@
+.select{
+    width:30% !important
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
