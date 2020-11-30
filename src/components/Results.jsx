@@ -38,8 +38,9 @@ const Results = ({ results }) => {
 								<Card.Body>
 									<Card.Title>{photo.id}</Card.Title>
 									<Card.Text>
-										Fecha en la tierra: {photo.earth_date}
-										Nombre completo de cámara: {photo.camera.full_name}
+										{photo.earth_date}
+										<br />
+										{photo.camera.full_name}
 									</Card.Text>
 								</Card.Body>
 							</Card>
