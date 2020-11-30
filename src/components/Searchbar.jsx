@@ -5,24 +5,36 @@ import styles from './searchbar.module.css';
 
 const apikey = 'o5lbWqCAy5pD5P3so5UC6eL9z9rV3BxRVAR3ssk8';
 
+function formatDate(date) {
+	var d = new Date(date),
+		month = '' + (d.getMonth() + 1),
+		day = '' + d.getDate(),
+		year = d.getFullYear();
+
+	if (month.length < 2) month = '0' + month;
+	if (day.length < 2) day = '0' + day;
+
+	return [year, month, day].join('-');
+}
+
 const handleSearch = async (state, setResponse, setState) => {
 	setState({ ...state, loading: true });
 
+	let date = formatDate(new Date());
+
 	const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${
 		state.rover !== '' ? state.rover : 'curiosity'
-	}/photos?earth_date=${state.date !== '' ? state.date : Date()}&camera=${
+	}/photos?earth_date=${state.date !== '' ? state.date : date}&camera=${
 		state.camera !== '' ? state.camera : 'fhaz'
 	}&api_key=${apikey}`;
-
 	const response = await (await fetch(URL)).json();
 
-	setState({ ...state, loading: false });
+	setState({ ...state, loading: false, date: date });
 
 	return setResponse(() => response.photos);
 };
 
 const Searchbar = ({ setResults }) => {
-	
 	const [state, setState] = useState({
 		date: '',
 		camera: 'fhaz',
