@@ -63,7 +63,6 @@ const Searchbar = ({ setResults }) => {
 				onChange={(e) => setState({ ...state, camera: e.target.value })}
 				className={styles.select}
 				as='select'
-				size='sm'
 			>
 				{cameras.map((camera) => {
 					return <option ey={camera}>{camera.toUpperCase()}</option>;
@@ -75,7 +74,6 @@ const Searchbar = ({ setResults }) => {
 				onChange={(e) => setState({ ...state, rover: e.target.value })}
 				className={styles.select}
 				as='select'
-				size='sm'
 			>
 				{rovers.map((rover) => {
 					return <option key={rover}>{rover.toUpperCase()}</option>;

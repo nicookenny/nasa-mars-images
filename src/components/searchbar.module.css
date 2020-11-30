@@ -7,3 +7,7 @@
     flex-direction: row !important;
     justify-content: space-between;
 }
+.card > *{
+    display: flex;
+    justify-content: space-around;
+}
