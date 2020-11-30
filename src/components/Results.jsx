@@ -17,7 +17,16 @@ const Results = ({ results }) => {
 				: results?.length < 10
 				? results.map((photo) => {
 						return (
-							<Col style={{margin:'0px 50px'}} xs={12} s={8} md={2}>
+							<Col
+								style={{
+									display: 'flex',
+									margin: '0 auto',
+									justifyContent: 'center',
+								}}
+								xs={10}
+								s={8}
+								md={2}
+							>
 								<Card style={{ textAlign: 'center', width: '250px' }}>
 									<Card.Img variant='top' src={photo.img_src} />
 									<Card.Body>
@@ -34,17 +43,19 @@ const Results = ({ results }) => {
 				  })
 				: results?.slice(0, 10).map((photo) => {
 						return (
-							<Card style={{ textAlign: 'center', width: '250px' }}>
-								<Card.Img variant='top' src={photo.img_src} />
-								<Card.Body>
-									<Card.Title>{photo.id}</Card.Title>
-									<Card.Text>
-										{photo.earth_date}
-										<br />
-										{photo.camera.full_name}
-									</Card.Text>
-								</Card.Body>
-							</Card>
+							<Col xs={10} s={8} md={2}>
+								<Card style={{ textAlign: 'center', width: '250px' }}>
+									<Card.Img variant='top' src={photo.img_src} />
+									<Card.Body>
+										<Card.Title>{photo.id}</Card.Title>
+										<Card.Text style={{ display: 'flex' }}>
+											{photo.earth_date}
+											<br />
+											{photo.camera.full_name}
+										</Card.Text>
+									</Card.Body>
+								</Card>
+							</Col>
 						);
 				  })}
 		</div>
