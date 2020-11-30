@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nasa-mars-images/static/css/main.e89c6761.chunk.css",
-    "main.js": "/nasa-mars-images/static/js/main.5bb7241e.chunk.js",
-    "main.js.map": "/nasa-mars-images/static/js/main.5bb7241e.chunk.js.map",
+    "main.js": "/nasa-mars-images/static/js/main.4c4e8201.chunk.js",
+    "main.js.map": "/nasa-mars-images/static/js/main.4c4e8201.chunk.js.map",
     "runtime-main.js": "/nasa-mars-images/static/js/runtime-main.461c67e8.js",
     "runtime-main.js.map": "/nasa-mars-images/static/js/runtime-main.461c67e8.js.map",
     "static/css/2.1a02f21c.chunk.css": "/nasa-mars-images/static/css/2.1a02f21c.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.1a02f21c.chunk.css",
     "static/js/2.9b5161cf.chunk.js",
     "static/css/main.e89c6761.chunk.css",
-    "static/js/main.5bb7241e.chunk.js"
+    "static/js/main.4c4e8201.chunk.js"
   ]
 }
