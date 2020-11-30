@@ -22,7 +22,7 @@ const handleSearch = async (state, setResponse, setState) => {
 
 	const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${
 		state.rover !== '' ? state.rover : 'curiosity'
-	}/photos?earth_date=${state.date !== '' ? state.date : date}&camera=${
+	}/photos?earth_date=${state.date}&camera=${
 		state.camera !== '' ? state.camera : 'fhaz'
 	}&api_key=${apikey}`;
 	const response = await (await fetch(URL)).json();
