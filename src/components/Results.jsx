@@ -10,7 +10,6 @@ const Results = ({ results }) => {
 				display: 'flex',
 				flexDirection: 'row',
 				flexWrap: 'wrap',
-				margin: '0px 150px',
 			}}
 		>
 			{results?.length === 0
