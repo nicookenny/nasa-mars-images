@@ -21,7 +21,9 @@ const handleSearch = async (state, setResponse, setState) => {
 	setState({ ...state, loading: true });
 
 	let date = formatDate(new Date());
+	
 	if (state.date == '') setState({ ...state, date: date });
+
 	const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${
 		state.rover !== '' ? state.rover : 'curiosity'
 	}/photos?earth_date=${state.date !== '' ? state.date : date}&camera=${
